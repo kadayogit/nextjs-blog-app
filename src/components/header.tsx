@@ -10,7 +10,7 @@ export default function Header() {
 
                 <ul className="flex space-x-4">
                     <li>
-                        <Link href="/posts" className="text-white hover:underline">
+                        <Link href="/blogs" className="text-white hover:underline">
                             Blogs
                         </Link>
                     </li>
