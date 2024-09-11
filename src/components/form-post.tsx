@@ -2,7 +2,7 @@
 
 const inputClass =
     'w-full py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500';
-const inputClassBtn = 'w-full py-2 px-3 border border-gray-300 rounded focus:outline-none bg-green-400 text-white text-bold hover:bg-green-500';
+const inputClassBtn = 'py-2 px-3 border border-gray-300 rounded focus:outline-none bg-blue-300 hover:bg-blue-400 text-white text-bold';
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import ReactTextareaAutosize from "react-textarea-autosize";
@@ -16,15 +16,15 @@ export default function FormPost() {
     });
 
     // create event handler onchange
-    const handleChange = (e: ChangeEvent <HTMLInputElement | HTMLTextAreaElement>) => {
-     e.preventDefault();
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        e.preventDefault();
 
-    //  binding the value
-    const {name, value} = e.target;
-    setFormData({
-        ...formData,
-        [name]: value,
-    });
+        //  binding the value
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
     };
 
     // create handle submit function on the form
@@ -34,22 +34,22 @@ export default function FormPost() {
     };
 
     return (
-        <form className="max-w-8xl mx-auto p-4"  onSubmit={handleSubmit}>
+        <form className="max-w-8xl mx-auto p-4" onSubmit={handleSubmit}>
             <div className="mb-4">
-                <input type="text" 
-                name="title" id="title" 
-                placeholder="Enter the title" 
-                className={inputClass} 
-                value={formData.title}
-                onChange={handleChange}/>
+                <input type="text"
+                    name="title" id="title"
+                    placeholder="Enter the title"
+                    className={inputClass}
+                    value={formData.title}
+                    onChange={handleChange} />
             </div>
             <div>
-               <ReactTextareaAutosize 
-               name="content" id="content"
-               minRows={5} placeholder="Enter the content" 
-               className={inputClass}
-               value={formData.content}
-               onChange={handleChange}/>
+                <ReactTextareaAutosize
+                    name="content" id="content"
+                    minRows={5} placeholder="Enter the content"
+                    className={inputClass}
+                    value={formData.content}
+                    onChange={handleChange} />
             </div>
             <button type="submit" className={inputClassBtn}>Post</button>
         </form>

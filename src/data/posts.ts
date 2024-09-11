@@ -22,5 +22,17 @@ export const posts = [
         "title": "new post",
         "content": "this post related to breaking news from cnn tv",
         "username": "Ali"
+    },
+    {
+        "id": 5,
+        "title": "Golden Talent",
+        "content": "this post related to breaking news from cnn tv",
+        "username": "Ali"
+    },
+    {
+        "id": 5,
+        "title": "Golden Talent",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "username": "Liban"
     }
 ]
